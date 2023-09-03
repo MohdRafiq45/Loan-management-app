@@ -1,0 +1,179 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="css/{{style}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="navContainer">
+        <nav>
+          <ul class="navList">
+            <li id="navLogo">
+              {{! <img src="" alt="logo"> }}
+              <p>Loan Management App</p>
+            </li>
+            <li id="navMid">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#services">Services</a>
+            </li>
+
+            <li id="navEnd">
+              <button class="button">Login</button>
+              <button class="button">SignUp</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container" id="home">
+        <div class="box1">
+          <pre>
+            <h1 class="text_black">Loan and Finance <span class="text_blue"><b>Company</b></span></h1>
+            {{! <h1>     </h1> }}
+              <h2 class="text_black">   Make Your Payment<span class="text_blue"><b> Faster</b></span></h2>
+                <h2>       and <span class="text_blue"><b>Easier</b></span></h2>
+
+          </pre>
+          <i id="footer_text">free,secure and easy way to apply for loans</i>
+        </div>
+        <div class="box2">
+          <img
+            src="/images/final_image.webp"
+            alt="image not found"
+            class="index_image"
+          />
+        </div>
+      </div>
+
+      {{! services section }}
+
+      <div class="service" id="services">
+        <h1 id="heading_service">Services</h1>
+        <div class="Servicecontainer">
+          <div class="box">
+            {{! <h4 id="easy_tranc">Easy Transaction</h4> }}
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+              et atque similique ut eum aperiam eius, id dolorem accusantium
+              quod, enim ducimus explicabo.</p>
+          </div>
+          <div class="box">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+              et atque similique ut eum aperiam eius, id dolorem accusantium
+              quod, enim ducimus explicabo.</p>
+          </div>
+          <div class="box">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+              et atque similique ut eum aperiam eius, id dolorem accusantium
+              quod, enim ducimus explicabo.</p>
+          </div>
+        </div>
+      </div>
+
+      {{! form section }}
+      <div class="form_container">
+        <h1>Business Loan Application</h1>
+        <div id="loan-form">
+          {{! <h2>Loan Application Form</h2> }}
+          <form id="application-form">
+            <div class="form-group">
+              <label for="name">Business Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="year">Year Established</label>
+              <input
+                type="number"
+                id="year"
+                name="year"
+                min="1900"
+                max="2023"
+                step="1"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="loan-amount">Loan Amount ($)</label>
+              <input
+                type="number"
+                id="loan-amount"
+                name="loan-amount"
+                min="1"
+                step="1"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="accounting-software">Select Accounting Software</label>
+              <select
+                id="accounting-software"
+                name="accounting-software"
+                required
+              >
+                <option value="xero">Xero</option>
+                <option value="myob">MYOB</option>
+                <!-- Add more options for other providers as needed -->
+              </select>
+            </div>
+            <div class="buttons">
+              <button id="review">Request Balance Sheet</button>
+              
+              <button type="submit" class="hidden" id="submit_btn">Submit Application</button>
+              
+
+            </div>
+
+          </form>
+        </div>
+        {{! <div id="pre-assessment">
+            <h2>Pre-Assessment Result</h2>
+            <p id="pre-assessment-result">Pre-assessment result will be displayed here.</p>
+        </div> }}
+
+        <div id="balance-sheet" class="hidden">
+          <h2>Balance Sheet</h2>
+          <table id="balance-sheet-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Profit or Loss ($)</th>
+                <th>Assets Value ($)</th>
+              </tr>
+            </thead>
+            <tbody id="balance-sheet-body">
+              <!-- Balance sheet rows will be added dynamically -->
+            </tbody>
+          </table>
+          
+        </div>
+
+        {{!-- <div id="applicationReview" class="hidden"></div> --}}
+        
+        <div id="applicationResult" class="hidden">
+        
+
+        </div>
+
+      </div>
+
+      <br />
+      {{! footer section }}
+      <div class="footer">
+        <footer>
+          <p>copyrights &copy; 2023</p>
+        </footer>
+      </div>
+
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
