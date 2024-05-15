@@ -89,6 +89,12 @@ const balanceSheet = [
     "month": 1,
     "profitOrLoss": 287000,
     "assetsValue": 212452
+  },
+  {
+     "year":2024,
+    "month":4,
+    "profitOrLoss":343434,
+    "assetsValue":34342342
   }
 
 ];
